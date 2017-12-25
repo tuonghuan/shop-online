@@ -8,7 +8,7 @@ namespace ShopThoiTrang.Models
 {
     public class LoginModel
     {
-       
+       //chinh sua them
             [Key]
             [Display(Name = "Tên đăng nhập")]
             [Required(ErrorMessage = "Bạn phải nhập tài khoản")]
