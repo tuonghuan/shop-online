@@ -1,0 +1,16 @@
+D:\c#\ShopThoiTrang\Model\bin\Debug\Model.dll.config
+D:\c#\ShopThoiTrang\Model\bin\Debug\Model.dll
+D:\c#\ShopThoiTrang\Model\bin\Debug\Model.pdb
+D:\c#\ShopThoiTrang\Model\bin\Debug\EntityFramework.dll
+D:\c#\ShopThoiTrang\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\c#\ShopThoiTrang\Model\bin\Debug\EntityFramework.xml
+D:\c#\ShopThoiTrang\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\c#\ShopThoiTrang\Model\obj\Debug\Model.dll
+D:\c#\ShopThoiTrang\Model\obj\Debug\Model.pdb
+D:\c#\ShopThoiTrang\Model\bin\Debug\PagedList.dll
+D:\c#\ShopThoiTrang\Model\bin\Debug\PagedList.Mvc.dll
+D:\c#\ShopThoiTrang\Model\bin\Debug\PagedList.xml
+D:\c#\ShopThoiTrang\Model\bin\Debug\PagedList.Mvc.xml
+D:\c#\ShopThoiTrang\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\c#\ShopThoiTrang\Model\bin\Debug\Common.dll
+D:\c#\ShopThoiTrang\Model\bin\Debug\Common.pdb

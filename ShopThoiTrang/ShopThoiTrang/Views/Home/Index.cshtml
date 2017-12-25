@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var slides = (List<Model.EF.Slide>)ViewBag.Slides;
+    var ListNewProducs = (List<Model.EF.Product>)ViewBag.NewProducts;
+    var ListHotProducs = (List<Model.EF.Product>)ViewBag.HotProducts;
+    
+   
+}
+<style>
+        #slider img {
+            height: 400px;
+            width:auto;
+          
+        }
+    </style>
+
+@section slide
+{
+    <div class="header_slide">
+        <div class="header_bottom_left">
+            <div class="categories">
+                @{ Html.RenderAction("ProductCategory", "Product");}
+            </div>
+        </div>
+        <div class="header_bottom_right">
+       
+
+
+           
+
+            <div class="slider-wrapper theme-default">
+                    <div id="slider" class="nivoSlider">
+                        @foreach (var item in slides)
+                        {
+
+
+
+
+
+
+
+
+                            <a href="@item.Link"><img src="@item.Image"  alt="learn more" /></a>
+
+
+                        }
+
+                    </div>
+                </div>
+
+           
+        </div>
+        <div class="clear"></div>
+    </div>
+}
+<div class="content">
+    <div class="content_top">
+        <div class="heading">
+            <h3>Sản phẩm mới</h3>
+        </div>
+        <div class="see">
+            <p><a href="/san-pham">Xem tất cả</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section group">
+        @foreach (var item in ListNewProducs)
+        {
+            var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+            <div class="grid_1_of_4 images_1_of_4">
+                <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
+                <h2>@item.Name</h2>
+                <div class="price-details">
+                    <div class="price-number">
+                        <p><span class="rupees">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ") VND</span></p>
+                    </div>
+                    <div class="add-cart">
+                      
+                        <h4><a href="/them-gio-hang?productId=@item.ID&quantity=1">Thêm vào giỏ <i class="fa fa-cart-plus" aria-hidden="true"></i></a></h4>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        }
+
+    </div>
+    <div class="content_bottom">
+        <div class="heading">
+            <h3>Sản phẩm hot</h3>
+        </div>
+        <div class="see">
+            <p><a href="/san-pham/">Xem tất cả</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section group">
+        @foreach (var item in ListHotProducs)
+        {
+            var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+            <div class="grid_1_of_4 images_1_of_4">
+                <a href="@url"><img src="@item.Image" alt="@item.Name" /></a>
+                <h2>@item.Name</h2>
+                <div class="price-details">
+                    <div class="price-number">
+                        <p><span class="rupees">@(item.Price.HasValue ? item.Price.Value.ToString("N0") : "Liên hệ") VND</span></p>
+                    </div>
+                    <div class="add-cart">
+                        <h4><a href="/them-gio-hang?productId=@item.ID&quantity=1">Thêm vào giỏ <i class="fa fa-cart-plus" aria-hidden="true"></i></a></h4>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
