@@ -9,7 +9,7 @@ namespace ShopThoiTrang.Controllers
     public class AboutController : Controller
     {
         //
-        // GET: /About/
+        //  dsafdafsfa GET: /About/
         public ActionResult Index()
         {
             return View();
