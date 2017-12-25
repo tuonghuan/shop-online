@@ -1,0 +1,30 @@
+﻿@model List<ShopThoiTrang.Models.CartItem>
+<div class="cart">
+    <p>
+        <a href="/Cart/Index" style="text-decoration: none;">
+            <span>Giỏ Hàng <i class="fa fa-shopping-cart" aria-hidden="true"></i>:</span>
+                @Model.Count Sản Phẩm
+        </a>
+        @*<div id="dd" class="wrapper-dropdown-2">
+            <ul class="dropdown">
+                @if(@Model.Count == 0)
+                {  <li>you have no items in your Shopping cart</li>
+
+                }
+                else
+                {
+                    foreach (var item in Model)
+                    {
+                        <li>@item.Product.Name</li>
+                    }
+                }
+
+
+
+
+
+
+            </ul>
+        </div>*@
+    </p>
+</div>

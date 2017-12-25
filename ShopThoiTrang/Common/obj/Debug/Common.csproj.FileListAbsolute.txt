@@ -1,0 +1,5 @@
+D:\c#\ShopThoiTrang\Common\bin\Debug\Common.dll
+D:\c#\ShopThoiTrang\Common\bin\Debug\Common.pdb
+D:\c#\ShopThoiTrang\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\c#\ShopThoiTrang\Common\obj\Debug\Common.dll
+D:\c#\ShopThoiTrang\Common\obj\Debug\Common.pdb

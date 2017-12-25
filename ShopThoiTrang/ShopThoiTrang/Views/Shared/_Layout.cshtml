@@ -1,0 +1,185 @@
+﻿<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Thời Trang | Trang Chủ </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href="/Assets/Client/css/bootstrap.css" rel="stylesheet" />
+
+
+    <link href="~/Assets/Client/css/bootstrap-social.css" rel="stylesheet" />
+    <link href="~/Assets/Client/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Assets/Client/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="/Assets/Client/css/jquery-ui.css" rel="stylesheet" />
+    <link href="/Assets/Client/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Assets/Client/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    
+
+
+    <script src="/Assets/Client/js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+
+        <script src="/Assets/Client/js/jquery-ui.js"></script>
+    <script src="/Assets/Client/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Assets/Client/js/move-top.js"></script>
+    <script type="text/javascript" src="/Assets/Client/js/easing.js"></script>
+
+    <script src="/NivoSlider/jquery.nivo.slider.js"></script>
+    <link href="/NivoSlider/nivo-slider.css" rel="stylesheet" />
+    <script src="/NivoSlider/jquery.nivo.slider.pack.js"></script>
+
+    <link href="~/NivoSlider/themes/default/default.css" rel="stylesheet" />
+
+    <link href="~/NivoSlider/themes/dark/dark.css" rel="stylesheet" />
+
+    <link href="~/NivoSlider/themes/bar/bar.css" rel="stylesheet" />
+
+    <link href="~/NivoSlider/themes/light/light.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="headertop_desc">
+
+                @{Html.RenderAction("TopMenu", "Home");}
+            </div>
+            <div class="header_top">
+                <div class="logo">
+                    <a href="/" rel="nofollow"><img src="/Assets/Client/images/logo.png" alt="" /></a>
+                </div>
+                @{Html.RenderAction("HeaderCart", "Home");}
+                <script type="text/javascript">
+                    function DropDown(el) {
+                        this.dd = el;
+                        this.initEvents();
+                    }
+                    DropDown.prototype = {
+                        initEvents: function () {
+                            var obj = this;
+
+                            obj.dd.on('click', function (event) {
+                                $(this).toggleClass('active');
+                                event.stopPropagation();
+                            });
+                        }
+                    }
+
+                    $(function () {
+
+                        var dd = new DropDown($('#dd'));
+
+                        $(document).click(function () {
+                            // all dropdowns
+                            $('.wrapper-dropdown-2').removeClass('active');
+                        });
+
+                    });
+
+                </script>
+                <div class="clear"></div>
+            </div>
+            <div class="header_bottom">
+                @{Html.RenderAction("MainMenu", "Home");}
+                <div class="search_box">
+                    <form action="/tim-kiem" method="get">
+                        <input type="text" id="txtKeyword" name="keyword" placeholder="Gõ từ khoá"><input type="submit" value="">
+                    </form>
+                </div>
+
+
+
+                <div class="clear"></div>
+            </div>
+
+            @RenderSection("slide", required: false)
+
+        </div>
+        <div class="main">
+            @RenderBody()
+
+        </div>
+    </div>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
+            fjs.parentNode.insertBefore(js, fjs);
+
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fbchatbox hidden-xs" style="position:fixed;right:10px;bottom:0;z-index:9999">
+        <div class="fb-page" data-href="https://www.facebook.com/Shop-Th%E1%BB%9Di-Trang-367082303741999/?modal=admin_todo_tour" data-small-header="true" data-adapt-container-width="false" data-height="300" data-width="300" data-hide-cover="true" data-show-facepile="true" data-show-posts="false" data-tabs="messages"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Shop-Th%E1%BB%9Di-Trang-367082303741999/?modal=admin_todo_tour"><a href="https://www.facebook.com/Shop-Th%E1%BB%9Di-Trang-367082303741999/?modal=admin_todo_tour">https://www.facebook.com/Shop-Th%E1%BB%9Di-Trang-367082303741999/?modal=admin_todo_tour</a></blockquote></div></div>
+        <span class="hide" id="closefbchat" style="right:0px;white-space: nowrap;position:absolute;bottom:299px;width:300px;padding:7px; background: #44619D;color: #fff;cursor: pointer;">Tắt Hỗ Trợ</span>
+    </div>
+    <div class="footer">
+        @{Html.RenderAction("Footer", "Home");}
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+    <script src="/Assets/Client/js/controller/baseController.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#slider').nivoSlider(
+                {
+                    effect: false,
+
+
+                }
+                );
+        });
+    </script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+
+    <script>
+        if (localStorage.getItem("fbchatclose") == 1) {
+
+            jQuery('.fb-page').toggleClass('hide');
+
+            jQuery('#closefbchat').html('<i class="fa fa-comments fa-2x"></i> Hỗ Trợ Khách Hàng').css({ 'bottom': 0 });
+        }
+
+        setTimeout(function () {
+            $("#closefbchat").removeClass("hide");
+        }, 1000);
+
+
+        jQuery('#closefbchat').click(function () {
+            jQuery('.fb-page').toggleClass('hide');
+            if (jQuery('.fb-page').hasClass('hide')) {
+                localStorage.setItem("fbchatclose", 1);
+
+                jQuery('#closefbchat').html('<i class="fa fa-comments fa-2x"></i> Hỗ Trợ Khách Hàng').css({ 'bottom': 0 });
+            }
+            else {
+                localStorage.setItem("fbchatclose", 0);
+                jQuery('#closefbchat').text('Tắt Hỗ Trợ').css({ 'bottom': 299 });
+            }
+        });
+    </script>
+    @RenderSection("jsFooter", required: false)
+</body>
+</html>
+
