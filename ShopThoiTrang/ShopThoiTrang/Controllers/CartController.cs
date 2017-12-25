@@ -18,7 +18,7 @@ namespace ShopThoiTrang.Controllers
     {
         private const string CartSession = "CartSession";
         //
-        // GET: /Cart/
+        // GET:abc  /Cart/
         public ActionResult Index()
         {
             var cart = Session[CartSession];
