@@ -21,6 +21,7 @@ namespace ShopThoiTrang.Controllers
             var model = new ProductCategoryDao().ListAll();
             return PartialView(model);
         }
+        //sdafhdsajkf
         public ActionResult Category(long cateId, int page = 1, int pageSize = 12)
         {
             var category = new CategoryDao().ViewDetail(cateId);
