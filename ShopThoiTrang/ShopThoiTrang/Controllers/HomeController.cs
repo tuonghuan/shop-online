@@ -26,7 +26,7 @@ namespace ShopThoiTrang.Controllers
             return View();
         }
         [ChildActionOnly]
-        
+        //bcd
         public ActionResult MainMenu()
         {
             var model = new MenuDao().ListByGroupId("1");
