@@ -17,7 +17,7 @@ namespace ShopThoiTrang.Controllers
             var model = new ContactDao().GetActiveContact();
             return View(model);
         }
-
+        //abc
         [HttpPost]
         public JsonResult Send(string name, string mobile, string address, string email, string content)
         {
