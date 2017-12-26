@@ -42,6 +42,7 @@ namespace ShopThoiTrang.Controllers
             ViewBag.Next = page + 1;
             ViewBag.Prev = page - 1;
 
+
             return View(model);
         }
         public JsonResult ListName(string q)
